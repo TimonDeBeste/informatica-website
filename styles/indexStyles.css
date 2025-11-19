@@ -1,14 +1,23 @@
 body {
-    font-family: Poppins, sans-serif;
+    font-family: 'Source Code Pro', monospace;
     background-color: white;
 }
 
 .container {
     border-style: solid;
-    border-radius: 50px;
+    border-radius: 25px;
     padding-top: 20px;
     padding: 20px;
     margin: 10vh;
     margin-right: 20vw;
     margin-left: 20vw;
+    color: #00FF00;
+    border-color: gray;
+    background-color: black;
+}
+
+.top-bar {
+
+    padding: 0px;
+    margin: 0px;
 }
