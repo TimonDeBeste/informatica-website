@@ -1,11 +1,14 @@
 body {
     font-family: Poppins, sans-serif;
+    background-color: white;
 }
 
-.fa-discord {
-    color: #5762EA;
-}
-
-.fa-github {
-    color: black;
+.container {
+    border-style: solid;
+    border-radius: 50px;
+    padding-top: 20px;
+    padding: 20px;
+    margin: 10vh;
+    margin-right: 20vw;
+    margin-left: 20vw;
 }
