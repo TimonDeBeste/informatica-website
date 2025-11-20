@@ -1,9 +1,24 @@
 body {
     font-family: 'Source Code Pro', monospace;
+    margin: 0;
+}
+
+body:has(.window) {
     background-color: white;
 }
 
+body:has(.fullscreen) {
+    background-color: black;
+}
+
+
 .container {
+    color: #00FF00;
+    border-color: gray;
+    background-color: black;
+}
+
+.container.window {
     border-style: solid;
     border-radius: 25px;
     padding-top: 20px;
@@ -11,13 +26,25 @@ body {
     margin: 10vh;
     margin-right: 20vw;
     margin-left: 20vw;
-    color: #00FF00;
-    border-color: gray;
-    background-color: black;
+}
+
+.container.fullscreen {
+    border-radius: 0;
+    margin: 0vh;
+    margin-bottom: 0vh;
 }
 
 .top-bar {
-
     padding: 0px;
     margin: 0px;
+}
+
+.btn {
+    border-style: none;
+    color: #00FF00;
+    background-color: black;
+    padding: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+
 }
