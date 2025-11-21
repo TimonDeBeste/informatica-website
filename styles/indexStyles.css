@@ -23,14 +23,14 @@ body:has(.fullscreen) {
     border-radius: 25px;
     padding-top: 20px;
     padding: 20px;
-    margin: 10vh;
+    margin: 5vh;
     margin-right: 20vw;
     margin-left: 20vw;
 }
 
 .container.fullscreen {
     border-radius: 0;
-    margin: 0vh;
+    padding: 20px;
     margin-bottom: 0vh;
 }
 
