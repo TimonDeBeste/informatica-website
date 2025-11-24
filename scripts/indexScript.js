@@ -53,8 +53,6 @@ document.getElementById("countdown").innerText = result;
 
 }, 1000);
 
-
-
 //function to minimize the screen
 
 function minimize() {
@@ -67,3 +65,4 @@ function maximize() {
 	document.getElementById("container").classList.remove("window")
 	document.getElementById("container").classList.add("fullscreen")
 }
+
