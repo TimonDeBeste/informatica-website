@@ -24,14 +24,14 @@ function nextFridayAtTwo() {
 	if (result <= now) {
 		result.setDate(result.getDate() + 7);
 	}
-	console.log(result);
+
 	return result;
 }
 
 
 
 var countDownDate = nextFridayAtTwo();
-console.log(countDownDate)
+
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -66,3 +66,21 @@ function maximize() {
 	document.getElementById("container").classList.add("fullscreen")
 }
 
+function navigationPopup(item) {
+	allPopups = ["file", "edit", "view", "help"]
+	
+	const element = document.getElementById(item);
+	if (element.hidden == true) {
+		element.hidden = false;
+	}
+	else {
+		element.hidden = true;
+	}
+
+	for (let i = 0; i < allPopups.length; i++) {
+		if (!(allPopups[i] == item)) {
+			const a = document.getElementById((allPopups[i]));
+			a.hidden = true;
+		}
+	}
+}

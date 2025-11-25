@@ -11,11 +11,49 @@
 </head>
 <body>
     <div id="container" class="container fullscreen">
-        <div class="top-bar">
-            <button class="btn"><i class="fa-solid fa-xmark"></i></button>
-            <button class="btn minimize" onclick="minimize()"><i class="fa-solid fa-minus"></i></button>
-            <button class="btn maximize" onclick="maximize()"><i class="fa-regular fa-square"></i></button>
+        <div class="top-nav-bar">
+            <div class="top-bar">
+                <button class="btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn minimize" onclick="minimize()"><i class="fa-solid fa-minus"></i></button>
+                <button class="btn maximize" onclick="maximize()"><i class="fa-regular fa-square"></i></button>
+            </div>
+
+            <div class="nav-bar">
+    <div class="nav-bar-buttons">
+
+        <div id="nav-file" class="nav-item">
+            <button class="btn nav-btn" onclick="navigationPopup('file')"><span>file</span></button>
+            <div class="popup" id="file" hidden>
+                <p>This is the content for file.</p>
+            </div>
         </div>
+
+        <div id="nav-edit" class="nav-item">
+            <button class="btn nav-btn" onclick="navigationPopup('edit')"><span>edit</span></button>
+            <div class="popup" id="edit" hidden>
+                <p>This is the content for edit.</p>
+            </div>
+        </div>
+
+        <div id="nav-view" class="nav-item">
+            <button class="btn nav-btn" onclick="navigationPopup('view')"><span>view</span></button>
+            <div class="popup" id="view" hidden>
+                <p>This is the content for view.</p>
+            </div>
+        </div>
+
+        <div id="nav-help" class="nav-item">
+            <button class="btn nav-btn" onclick="navigationPopup('help')"><span>help</span></button>
+            <div class="popup" id="help" hidden>
+                <p>This is the content for help.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+
         <h1>Codeclub homepage</h1>
         <h2 id="welkom">welkom</h2>
         <p>Bij codeclub is het altijd leuk!</p>
@@ -29,13 +67,16 @@
                 <li>spekjes eten</li>
             </ul>
         </article>
+
         <article id="leden">
             <h2>Onze leden:</h2><!--Een lijst met sommige leden en hun rollen binnen de cc-->
+
             <p>Docenten:</p>
             <ul>
                 <li>Hijzen (Hond-uitlater)</li>
                 <li>Dave (Woordgrappen-koning)</li>
             </ul>
+
             <p>Leerlingen:</p>
             <ul>
                 <li>Teije (Dictator)</li>
@@ -48,6 +89,7 @@
                 <li>Julianne (Badger)</li>
             </ul>
         </article>
+
         <footer>
             <a href="https://discord.gg/A6kKbxDG" target="_blank"><i class="fa-brands fa-discord"></i></a>
             <a href="https://github.com/arhcodeclub" target="_blank"><i class="fa-brands fa-github"></i></a>

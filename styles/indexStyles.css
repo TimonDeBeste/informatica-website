@@ -34,17 +34,48 @@ body:has(.fullscreen) {
     margin-bottom: 0vh;
 }
 
+.nav-item {
+    position: relative; /* establishes positioning context for popup */
+    display: inline-block;
+}
+
+.popup {
+    position: absolute;
+    top: 100%;   /* align popup top to button bottom */
+    left: 0;     /* align left edges */
+    background: #222222;
+    padding: 10px;
+    z-index: 20;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-btn {
+    width: fit-content;
+}
+
+.nav-bar-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
 .top-bar {
     padding: 0px;
     margin: 0px;
+    font-size: 0px;
 }
 
 .btn {
     border-style: none;
     color: #00FF00;
     background-color: black;
-    padding: 0;
-    margin-top: 15px;
-    margin-left: 10px;
-
+    padding: 5px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 13.3333px;
+}
+.btn:hover {
+    background-color: #333333;
 }
