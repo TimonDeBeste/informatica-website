@@ -73,6 +73,7 @@ function navigationPopup(item) {
 	if (element.hidden == true) {
 		element.hidden = false;
 	}
+
 	else {
 		element.hidden = true;
 	}

@@ -46,6 +46,8 @@ body:has(.fullscreen) {
     background: #222222;
     padding: 10px;
     z-index: 20;
+    width: fit-content;
+    flex-direction: column;
 }
 
 .nav-bar {
@@ -78,4 +80,21 @@ body:has(.fullscreen) {
 }
 .btn:hover {
     background-color: #333333;
+}
+
+.btn.inside-popup {
+    background-color: #222222;
+}
+
+.btn.inside-popup:hover {
+    background-color: #282828;
+}
+
+
+.btn.inside-popup:active {
+    background-color: #212121;
+}
+
+.fa-brands {
+    color: #00FF00;
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/indexStyles.css">
-    <link rel="stylesheet" href="./styles/footerStyles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./assets/icon.jpeg">
     <title>Codeclub</title>
     <script src="https://kit.fontawesome.com/06c8f43356.js" crossorigin="anonymous"></script>
     
@@ -19,39 +19,41 @@
             </div>
 
             <div class="nav-bar">
-    <div class="nav-bar-buttons">
+                <div class="nav-bar-buttons">
 
-        <div id="nav-file" class="nav-item">
-            <button class="btn nav-btn" onclick="navigationPopup('file')"><span>file</span></button>
-            <div class="popup" id="file" hidden>
-                <p>This is the content for file.</p>
+                    <div id="nav-file" class="nav-item">
+                        <button class="btn nav-btn" onclick="navigationPopup('file')"><span>file</span></button>
+                        <div class="popup" id="file" hidden>
+                            <button class="btn inside-popup" onclick="document.location.href = './html/3DPrinten.html'">3D-Printen</button>
+                            <button class="btn inside-popup" onclick="document.location.href = './html/Programmeren.html'">Programmeren</button>
+                            <button class="btn inside-popup" onclick="document.location.href = './html/spekjesEten.html'">Spekjes eten</button>
+                        </div>
+                    </div>
+
+                    <div id="nav-edit" class="nav-item">
+                        <button class="btn nav-btn" onclick="navigationPopup('edit')"><span>edit</span></button>
+                        <div class="popup" id="edit" hidden>
+                            <p>This is the content for edit.</p>
+                        </div>
+                    </div>
+
+                    <div id="nav-view" class="nav-item">
+                        <button class="btn nav-btn" onclick="navigationPopup('view')"><span>view</span></button>
+                        <div class="popup" id="view" hidden>
+                            <button class="btn inside-popup" onclick="maximize()">Enter fullscreen</button>
+                            <button class="btn inside-popup" onclick="minimize()">Exit fullscreen</button>
+                        </div>
+                    </div>
+
+                    <div id="nav-help" class="nav-item">
+                        <button class="btn nav-btn" onclick="navigationPopup('help')"><span>help</span></button>
+                        <div class="popup" id="help" hidden>
+                            <img src="./assets/stopItGetSomeHelp.png" alt="The stop it get some help meme" class="inside-popup" width="200">
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
-
-        <div id="nav-edit" class="nav-item">
-            <button class="btn nav-btn" onclick="navigationPopup('edit')"><span>edit</span></button>
-            <div class="popup" id="edit" hidden>
-                <p>This is the content for edit.</p>
-            </div>
-        </div>
-
-        <div id="nav-view" class="nav-item">
-            <button class="btn nav-btn" onclick="navigationPopup('view')"><span>view</span></button>
-            <div class="popup" id="view" hidden>
-                <p>This is the content for view.</p>
-            </div>
-        </div>
-
-        <div id="nav-help" class="nav-item">
-            <button class="btn nav-btn" onclick="navigationPopup('help')"><span>help</span></button>
-            <div class="popup" id="help" hidden>
-                <p>This is the content for help.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
         </div>
 
         <h1>Codeclub homepage</h1>
@@ -94,7 +96,7 @@
             <a href="https://discord.gg/A6kKbxDG" target="_blank"><i class="fa-brands fa-discord"></i></a>
             <a href="https://github.com/arhcodeclub" target="_blank"><i class="fa-brands fa-github"></i></a>
         </footer>
-        <script src="scripts/indexScript.js"></script>
+        <script src="scripts/script.js"></script>
     </div>
 </body>
 </html>
