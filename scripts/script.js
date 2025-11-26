@@ -85,3 +85,14 @@ function navigationPopup(item) {
 		}
 	}
 }
+
+function changePage(newPage) {
+	if (document.getElementById("container").classList.contains("fullscreen")){
+		document.location.href = newPage
+	}
+
+	if (document.getElementById("container").classList.contains("window")) {
+		document.location.href = newPage
+		minimize()
+	}
+}
