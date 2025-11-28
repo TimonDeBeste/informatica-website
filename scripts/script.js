@@ -1,3 +1,6 @@
+sessionStorage.setItem("windowMode", "fullscreen")
+
+let windowMode = sessionStorage.getItem("windowMode")
 
 const welcomeMessages = [
 	"Welkom bij de codeclub!",
@@ -56,14 +59,26 @@ document.getElementById("countdown").innerText = result;
 //function to minimize the screen
 
 function minimize() {
-	document.getElementById("container").classList.remove("fullscreen")
-	document.getElementById("container").classList.add("window")
+	if (windowMode == "fullscreen") {
+		windowMode = "window";
+	}
+	console.log(windowMode)
+	windowModeRefresh()
 
 }
 
 function maximize() {
-	document.getElementById("container").classList.remove("window")
-	document.getElementById("container").classList.add("fullscreen")
+	if (windowMode == "window") {
+		windowMode = "fullscreen";
+	}
+	console.log(windowMode)
+	windowModeRefresh()
+}
+
+function windowModeRefresh() {
+	console.log(windowMode)
+	windowMode == "fullscreen" ? document.getElementById("container").classList.remove("fullscreen") : document.getElementById("container").classList.remove("window");
+	document.getElementById("container").classList.add(windowMode);
 }
 
 function navigationPopup(item) {
