@@ -1,5 +1,5 @@
 body {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     margin: 0;
 }
 
@@ -11,9 +11,8 @@ body:has(.fullscreen) {
     background-color: black;
 }
 
-
 .container {
-    color: #00FF00;
+    color: #00ff00;
     border-color: gray;
     background-color: black;
 }
@@ -41,8 +40,8 @@ body:has(.fullscreen) {
 
 .popup {
     position: absolute;
-    top: 100%;   /* align popup top to button bottom */
-    left: 0;     /* align left edges */
+    top: 100%; /* align popup top to button bottom */
+    left: 0; /* align left edges */
     background: #222222;
     padding: 10px;
     z-index: 20;
@@ -72,10 +71,10 @@ body:has(.fullscreen) {
 
 .btn {
     border-style: none;
-    color: #00FF00;
+    color: #00ff00;
     background-color: black;
     padding: 5px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-size: 13.3333px;
 }
 .btn:hover {
@@ -90,11 +89,10 @@ body:has(.fullscreen) {
     background-color: #282828;
 }
 
-
 .btn.inside-popup:active {
     background-color: #212121;
 }
 
 .fa-brands {
-    color: #00FF00;
+    color: #00ff00;
 }

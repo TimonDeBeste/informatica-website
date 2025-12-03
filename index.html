@@ -1,102 +1,162 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <script src="https://kit.fontawesome.com/06c8f43356.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" href="./assets/icon.jpeg">
-    <script src="scripts/script.js"></script>
-    <title>Codeclub</title>
-    
-</head>
-<body>
-    <div id="container" class="container fullscreen">
-        <div class="top-nav-bar">
-            <div class="top-bar">
-                <button class="btn"><i class="fa-solid fa-xmark"></i></button>
-                <button class="btn minimize" onclick="minimize()"><i class="fa-solid fa-minus"></i></button>
-                <button class="btn maximize" onclick="maximize()"><i class="fa-regular fa-square"></i></button>
-            </div>
+    <head>
+        <script
+            src="https://kit.fontawesome.com/06c8f43356.js"
+            crossorigin="anonymous"
+        ></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="icon" href="./assets/icon.jpeg" />
+        <script src="scripts/script.js"></script>
+        <title>Codeclub</title>
+    </head>
+    <body>
+        <div id="container" class="container fullscreen">
+            <div class="top-nav-bar">
+                <div class="top-bar">
+                    <button class="btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button class="btn minimize" onclick="minimize()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button class="btn maximize" onclick="maximize()">
+                        <i class="fa-regular fa-square"></i>
+                    </button>
+                </div>
 
-            <div class="nav-bar">
-                <div class="nav-bar-buttons">
-
-                    <div id="nav-file" class="nav-item">
-                        <button class="btn nav-btn" onclick="navigationPopup('file')"><span>file</span></button>
-                        <div class="popup" id="file" hidden>
-                            <button class="btn inside-popup" onclick="changePage('../html/3DPrinten.html')">3D-Printen</button>
-                            <button class="btn inside-popup" onclick="document.location.href = './html/Programmeren.html'">Programmeren</button>
-                            <button class="btn inside-popup" onclick="document.location.href = './html/spekjesEten.html'">Spekjes eten</button>
+                <div class="nav-bar">
+                    <div class="nav-bar-buttons">
+                        <div id="nav-file" class="nav-item">
+                            <button
+                                class="btn nav-btn"
+                                onclick="navigationPopup('file')"
+                            >
+                                <span>file</span>
+                            </button>
+                            <div class="popup" id="file" hidden>
+                                <button
+                                    class="btn inside-popup"
+                                    onclick="changePage('../html/3DPrinten.html')"
+                                >
+                                    3D-Printen
+                                </button>
+                                <button
+                                    class="btn inside-popup"
+                                    onclick="document.location.href = './html/Programmeren.html'"
+                                >
+                                    Programmeren
+                                </button>
+                                <button
+                                    class="btn inside-popup"
+                                    onclick="document.location.href = './html/spekjesEten.html'"
+                                >
+                                    Spekjes eten
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="nav-edit" class="nav-item">
-                        <button class="btn nav-btn" onclick="navigationPopup('edit')"><span>edit</span></button>
-                        <div class="popup" id="edit" hidden>
-                            <p>This is the content for edit.</p>
+                        <div id="nav-edit" class="nav-item">
+                            <button
+                                class="btn nav-btn"
+                                onclick="navigationPopup('edit')"
+                            >
+                                <span>edit</span>
+                            </button>
+                            <div class="popup" id="edit" hidden>
+                                <p>This is the content for edit.</p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="nav-view" class="nav-item">
-                        <button class="btn nav-btn" onclick="navigationPopup('view')"><span>view</span></button>
+                        <div id="nav-view" class="nav-item">
+                            <button
+                                class="btn nav-btn"
+                                onclick="navigationPopup('view')"
+                            >
+                                <span>view</span>
+                            </button>
+                        </div>
                         <div class="popup" id="view" hidden>
-                            <button class="btn inside-popup" onclick="maximize()">Enter fullscreen</button>
-                            <button class="btn inside-popup" onclick="minimize()">Exit fullscreen</button>
+                            <button
+                                class="btn inside-popup"
+                                onclick="maximize()"
+                            >
+                                Enter fullscreen
+                            </button>
+                            <button
+                                class="btn inside-popup"
+                                onclick="minimize()"
+                            >
+                                Exit fullscreen
+                            </button>
                         </div>
                     </div>
 
                     <div id="nav-help" class="nav-item">
-                        <button class="btn nav-btn" onclick="navigationPopup('help')"><span>help</span></button>
+                        <button
+                            class="btn nav-btn"
+                            onclick="navigationPopup('help')"
+                        >
+                            <span>help</span>
+                        </button>
                         <div class="popup" id="help" hidden>
-                            <img src="./assets/stopItGetSomeHelp.png" alt="The stop it get some help meme" class="inside-popup" width="200">
+                            <img
+                                src="./assets/stopItGetSomeHelp.png"
+                                alt="The stop it get some help meme"
+                                class="inside-popup"
+                                width="200"
+                            />
                         </div>
                     </div>
-
                 </div>
             </div>
+            <h1>Codeclub homepage</h1>
+            <h2 id="welkom">welkom</h2>
+            <p>Bij codeclub is het altijd leuk!</p>
+            <h2 id="countdown"></h2>
+
+            <article id="watWeDoen">
+                <h2>Wat doen we bij de codeclub:</h2>
+                <ul>
+                    <li>3D-Printen</li>
+                    <li>Programmeren</li>
+                    <li>spekjes eten</li>
+                </ul>
+            </article>
+
+            <article id="leden">
+                <h2>Onze leden:</h2>
+                <!--Een lijst met sommige leden en hun rollen binnen de cc-->
+
+                <p>Docenten:</p>
+                <ul>
+                    <li>Hijzen (Hond-uitlater)</li>
+                    <li>Dave (Woordgrappen-koning)</li>
+                </ul>
+
+                <p>Leerlingen:</p>
+                <ul>
+                    <li>Teije (Dictator)</li>
+                    <li>Timon (Lt. Dictator)</li>
+                    <li>Jort (3D-Printerer)</li>
+                    <li>Jan (Javascript hater)</li>
+                    <li>Elin (Nerd)</li>
+                    <li>Bas (Niet-programmeur)</li>
+                    <li>Max (Fortniter)</li>
+                    <li>Julianne (Badger)</li>
+                </ul>
+            </article>
+
+            <footer>
+                <a href="https://discord.gg/A6kKbxDG" target="_blank"
+                    ><i class="fa-brands fa-discord"></i
+                ></a>
+                <a href="https://github.com/arhcodeclub" target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                ></a>
+            </footer>
         </div>
-
-        <h1>Codeclub homepage</h1>
-        <h2 id="welkom">welkom</h2>
-        <p>Bij codeclub is het altijd leuk!</p>
-        <h2 id="countdown"></h2>
-
-        <article id="watWeDoen">
-            <h2>Wat doen we bij de codeclub:</h2>
-            <ul>
-                <li>3D-Printen</li>
-                <li>Programmeren</li>
-                <li>spekjes eten</li>
-            </ul>
-        </article>
-
-        <article id="leden">
-            <h2>Onze leden:</h2><!--Een lijst met sommige leden en hun rollen binnen de cc-->
-
-            <p>Docenten:</p>
-            <ul>
-                <li>Hijzen (Hond-uitlater)</li>
-                <li>Dave (Woordgrappen-koning)</li>
-            </ul>
-
-            <p>Leerlingen:</p>
-            <ul>
-                <li>Teije (Dictator)</li>
-                <li>Timon (Lt. Dictator)</li>
-                <li>Jort (3D-Printerer)</li>
-                <li>Jan (Javascript hater)</li>
-                <li>Elin (Nerd)</li>
-                <li>Bas (Niet-programmeur)</li>
-                <li>Max (Fortniter)</li>
-                <li>Julianne (Badger)</li>
-            </ul>
-        </article>
-
-        <footer>
-            <a href="https://discord.gg/A6kKbxDG" target="_blank"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://github.com/arhcodeclub" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </footer>
-    </div>
-</body>
+    </body>
 </html>
