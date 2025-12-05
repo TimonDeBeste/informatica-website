@@ -1,7 +1,3 @@
-sessionStorage.setItem("windowMode", "fullscreen");
-
-let windowMode = sessionStorage.getItem("windowMode");
-
 const welcomeMessages = [
     "Welkom bij de codeclub!",
     "Dit is de codeclub.",
@@ -65,30 +61,6 @@ var x = setInterval(function () {
 
 //function to minimize the screen
 
-function minimize() {
-    if (windowMode == "fullscreen") {
-        windowMode = "window";
-    }
-    console.log(windowMode);
-    windowModeRefresh();
-}
-
-function maximize() {
-    if (windowMode == "window") {
-        windowMode = "fullscreen";
-    }
-    console.log(windowMode);
-    windowModeRefresh();
-}
-
-function windowModeRefresh() {
-    console.log(windowMode);
-    windowMode == "fullscreen"
-        ? document.getElementById("container").classList.remove("fullscreen")
-        : document.getElementById("container").classList.remove("window");
-    document.getElementById("container").classList.add(windowMode);
-}
-
 function navigationPopup(item) {
     allPopups = ["file", "edit", "view", "help"];
 
@@ -107,13 +79,22 @@ function navigationPopup(item) {
     }
 }
 
-function changePage(newPage) {
-    if (document.getElementById("container").classList.contains("fullscreen")) {
-        document.location.href = newPage;
+function minimize() {
+    if (windowMode == "fullscreen") {
+        windowMode = "window";
     }
+    console.log(windowMode);
+    windowModeRefresh();
+}
 
-    if (document.getElementById("container").classList.contains("window")) {
-        document.location.href = newPage;
-        minimize();
+function maximize() {
+    if (windowMode == "window") {
+        windowMode = "fullscreen";
     }
+    console.log(windowMode);
+    windowModeRefresh();
+}
+
+function changePage(newPage) {
+    document.location.href = newPage;
 }
