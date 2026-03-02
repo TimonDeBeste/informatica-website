@@ -34,14 +34,14 @@ body:has(.fullscreen) {
 }
 
 .nav-item {
-    position: relative; /* establishes positioning context for popup */
+    position: relative;
     display: inline-block;
 }
 
 .popup {
     position: absolute;
-    top: 100%; /* align popup top to button bottom */
-    left: 0; /* align left edges */
+    top: 100%; 
+    left: 0;
     background: #222222;
     padding: 10px;
     z-index: 20;

@@ -79,6 +79,8 @@ function navigationPopup(item) {
     }
 }
 
+let windowMode = "fullScreen"
+
 function minimize() {
     if (windowMode == "fullscreen") {
         windowMode = "window";
@@ -93,6 +95,14 @@ function maximize() {
     }
     console.log(windowMode);
     windowModeRefresh();
+}
+
+function windowModeRefresh() {
+    let notWindowMode;
+    if (windowMode == "fullscreen") {notWindowMode = "window"}
+    else {notWindowMode = "fullscreen"}
+    const container = document.getElementById("container");
+    container.classList.replace(str(windowMode), str(notWindowMode))
 }
 
 function changePage(newPage) {
